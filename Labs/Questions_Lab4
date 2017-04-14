@@ -1,0 +1,24 @@
+Lab 4 Utilities
+1. Write a one line command that finds a file that contains the word "orange" in the current directory and open it with vim.
+
+2. How do you customize your login setting so that every time you log in, the Shell displays: Hello, !
+
+3. Customize your shell prompt so that it will always show your id, the server name, and the current directory, like this:
+
+johndoe@voyager: /home/students/johndoe->cd csc505
+
+johndoe@voyager: /home/students/johndoe/csc505->cd labs
+
+johndoe@voyager: /home/students/johndoe/csc505/labs->
+
+4. Given the file "fruits":
+
+$cat fruits
+apple
+orange
+kiwi
+pear
+
+Write a one line command that counts the lines in files, but suppresses the error.
+
+5. In the dropbox directory, find all the lab files that are two days past due (two days from today) and mail the result to yourself. 

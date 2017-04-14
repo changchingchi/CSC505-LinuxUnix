@@ -1,0 +1,12 @@
+Lab 2 Filters
+Write a command to print the lines that contain the word "object" in all the files in a directory and also suppress the file names.
+Write a command to print the file names in a directory, sorted by file name.
+Write a command to print the lines that start with the word "first". 
+List the contents of a directory using only the echo command.
+Write a command to find out the author of each file in a directory.
+Sort all the files in a directory by name and show associated last modification information.
+Display all the files whose names end with lab1 in the directory /home/dropbox by modification time. You should find all the variations of lab1 file, such as Lab1, LAB1, laB1, etc.
+Display this time yesterday.
+What is (are) the advantage(s) of running a command in the background. 
+/etc/passwd is a system file that stores users login information. Display the contents of the file according the user names.
+

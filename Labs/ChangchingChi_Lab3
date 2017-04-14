@@ -1,0 +1,45 @@
+1. Create a regex that matches cat in My cat is brown, but not in category or bobcat. Create another regex that matches cat in staccato, but not in any of the three previous matches.
+
+Answer:
+'\bcat\b'
+'\bstaccato\b'
+
+2. Create a regular expression that validates an email address. The rules of a valid email address are:
+	An email address consists of: username@domain
+	Domain consists of label and domain name . 
+	Username can not contain any space
+	Multiple username can be separated with periods. 
+	A username may contain hyphens, but no two hyphens in a row. A username must not start nor end with a hyphen
+	Domain can not start with a dot. 
+	No two periods in succession can be in a domain name
+	Top level domain names: e.g, com, org, edu, gov, net, tv. Wikipedia maintains a comprehensive list of top-level domain names athttp://en.wikipedia.org/wiki/List_of_Internet_top-level_domains.
+
+Answer:
+^[^\.-]([A-Za-z0-9]|-[^-]|\.[^\.\s]|)*(\.[0-9A-Za-z])*@[^\.]([A-Za-z0-9]|\.[^\.])*$
+
+
+3. Create a regular expression that matches any date in yyyy-mm-dd format, and separately captures the year, month, and day.
+
+Answer: 
+'[1-9][0-9]{3}-(0[1-9]|1[0-2])-(31|[123]0|[012]?[1-9])'
+
+4. Create a regular expression that matches a North American phone number including the area code in any common format. These formats include 1234567890, 123-456-7890, 123.456.7890, 123 456 7890, (123) 456 7890, and all related combinations.  Telephone number Match these       But not these 123-456-7890   12-345-67890 (123)456-7890  (123) 456 789   123)456-7890 123.456.7890 123 456 7890
+
+Answer:
+'((\()[0-9]{3}(\)(\-|\s|\.)?)[0-9]{3}(\-|\s|\.)?[0-9]{4})|([0-9]{3}((\-|\s|\.)?)[0-9]{3}(\-|\s|\.)?[0-9]{4})'
+
+5.Create a regular expression that matches any of the variations on the name: vic, Victor, Victoria, victor, Victoria, VICKY, VICTOR. VICTORIA, Vic, VIC
+
+Answer:
+'[v|V][i|I][c|C]([t|T|K]?)(o|Y|O)?(r|R)?(i|\.)?(a)?(I)?(A)?'
+
+6. Create a regular expression that will find a line with leading and/or trailing space(s).
+
+Answer:
+'^(\s+.+)|(.+\s+)$'
+
+7. Write a regular expression that matches only "Good Comments" in the following string: regex is very powerful///*_**\\\*****Good Comments--///*/****//and I love it! (test your regex on http://www.regexpal.com and http://regex101.com) 
+
+Answer:
+'Good Comments'
+

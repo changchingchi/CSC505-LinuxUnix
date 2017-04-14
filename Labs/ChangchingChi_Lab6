@@ -1,0 +1,26 @@
+1.sed -e 's/Jon/Johnathan/g' databook.txt
+
+2.sed -e ‘1,3d' databook.txt
+
+3.sed -n ‘5,10p' databook.txt
+
+4.sed -e ‘/Lane/d’ databook.txt
+
+5.sed -rn '/:(11|12)\//p' databook.txt
+
+6.sed -e '/^Fred/a\***' databook.txt
+
+7.sed -e 's/.*Jose.*/JOSE HAS RETIRED/g' databook.txt
+
+8.sed -e '/Popeye/s#[0-9][0-9]*/[0-9][0-9]*/[0-9][0-9]#11/14/46#g' databook.txt
+
+9.sed -e '/^[ \t\n]*$/d' databook.txt
+
+10. 
+1iPERSONNEL FILE
+/500$/d
+s/\(^[A-Za-z]*\)\([ \t]*\)\([A-Za-z]*\):\(.*\)$/\3\2\1:\4/g
+$aTHE END
+
+11. sed 's/^\(.*\) *: */***FOUND DUPLICATE***\1": /' databook.txt | sort | uniq -d
+12. sort fileA.txt | uniq 

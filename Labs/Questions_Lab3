@@ -1,0 +1,27 @@
+1. Create a regex that matches cat in My cat is brown, but not in category or bobcat. Create another regex that matches cat in staccato, but not in any of the three previous matches.
+
+2. Create a regular expression that validates an email address. The rules of a valid email address are:
+
+An email address consists of: username@domain
+Domain consists of label and domain name . Domain can not start with a dot. Multiple label can be separated with periods. No two periods in succession can be in a domain name
+A label may contain hyphens, but no two hyphens in a row. A label must not start nor end with a hyphen.
+Username can not contain any space
+Top level domain names: e.g, com, org, edu, gov, net, tv. Wikipedia maintains a comprehensive list of top-level domain names at http://en.wikipedia.org/wiki/List_of_Internet_top-level_domains.
+3. Create a regular expression that matches any date in yyyy-mm-dd format, and separately captures the year, month, and day. 
+
+4. Create a regular expression that matches a North American phone number including the area code in any common format. These formats include 1234567890, 123-456-7890, 123.456.7890, 123 456 7890, (123) 456 7890, and all related combinations. 
+Telephone number
+Match these       But not these
+123-456-7890   12-345-67890
+(123)456-7890 
+(123) 456 789   123)456-7890
+123.456.7890  
+123 456 7890
+
+5. Create a regular expression that matches any of the variations on the name: vic, Victor, Victoria, victor, Victoria, VICKY, VICTOR. VICTORIA, Vic, VIC
+
+6. Create a regular expression that will find a line with leading and/or trailing space(s).
+
+7. Write a regular expression that matches only "Good Comments" in the following string:
+regex is very powerful///*_**\\\*****Good Comments--///*/****//and I love it!
+(test your regex on http://www.regexpal.com and http://regex101.com)

@@ -1,0 +1,39 @@
+1. Write a command to print the lines that contain the word "object" in all the files in a directory and also suppress the file names.
+
+grep -h object ./* 
+
+2. Write a command to print the file names in a directory, sorted by file name.
+//by default, ls command give you the list sorted by name
+ls -l | sort
+
+3. Write a command to print the lines that start with the word "first". 
+
+grep "^first" ./*
+
+4. List the contents of a directory using only the echo command.
+
+echo *
+
+5. Write a command to find out the author of each file in a directory.
+//third field is author, ninth field is the file name
+ls -l | awk '{print $3 }' 
+
+6. Sort all the files in a directory by name and show associated last modification information.
+ls -l | awk '{print $9, $6,$7,$8 }' | sort
+
+7. Display all the files whose names end with lab1 in the directory /home/dropbox by modification time. You should find all the variations of lab1 file, such as Lab1, LAB1, laB1, etc.
+
+ls -lt /home/dropbox | grep '[Ll][Aa][Bb]1$'
+
+8.Display this time yesterday.
+
+//linux 
+date --date="1 days ago"
+
+9. What is (are) the advantage(s) of running a command in the background. 
+if the job or command will take long time to process, one might want to put the job in to background so that user can still interactive with current console. It will not block the current terminal for other commands. To make the current command run in background simply append ‘&’ at the end of command. 
+
+10. /etc/passwd is a system file that stores users login information. Display the contents of the file according the user names.
+cat /etc/passwd | sort
+
+

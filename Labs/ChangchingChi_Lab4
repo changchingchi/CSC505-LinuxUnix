@@ -1,0 +1,30 @@
+1. Write one line command that finds a file that contains the word "orange" in the current directory and open it with vim.
+vi `grep -li "orange" *`
+
+2. How do you customize your login setting so that every time you log in, the Shell displays: Hello, !
+//in your ~/.bashrc file, append the following
+echo "Hello, !" 
+//and source the file to make it effective
+source ~/.bashrc
+
+3. Customize your shell prompt so that it will always show your id, the server name, and the current directory, like this:
+johndoe@voyager: /home/students/johndoe->cd csc505
+johndoe@voyager: /home/students/johndoe/csc505->cd labs
+johndoe@voyager: /home/students/johndoe/csc505/labs->
+//in your ~/.bashrc file, append the following
+PS1='\u@\h: $(pwd -P)->' 
+//and source the file to make it effective
+source ~/.bashrc
+
+4. Given the file "fruits":
+$cat fruits
+apple
+orange
+kiwi
+pear
+
+Write a one line command that counts the lines in files, but suppresses the error.
+wc fruits -l 2>/dev/null
+
+5. In the dropbox directory, find all the lab files that are two days past due (two days from today) and mail the result to yourself. 
+find /home/victoryu/labs/dropbox -mtime -2 | mail -s "past due lab files" chichang125@students.itu.edu 

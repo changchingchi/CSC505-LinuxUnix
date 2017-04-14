@@ -1,0 +1,73 @@
+1. Given two files:
+
+fileA:
+a b
+c d
+
+fileB:
+1 2 3 4
+5 6 7 8
+
+Write an one-line command that takes the 2nd and 3rd columns from fileB, and merge with fileA, so the new file will look like this:
+
+a b 2 3
+c d 6 7
+
+answer:
+cut -d" " -f2-3 fileB | paste -d" " fileA - >fileC
+
+2.  Create a file containing the following data. Use tabs to separate the fields.
+
+1425    Juan    14.25
+4321    George    21.11
+6781    Anna    16.77
+1451    Ben    21.77
+2277    Tuan    18.77
+Use cut and paste to swap field 2 and field 3.
+$ cat names_and_wages
+1425    Juan    14.25
+4321    George  21.11
+6781    Anna    16.77
+1451    Ben     21.77
+2277    Tuan    18.77
+
+answer:
+PLEASE NOTE THAT THE DELIMITER IS TAB BY DEFAULT.  
+paste <(cut -f1,3 names_and_wages) <(cut -f2 names_and_wages)
+
+3.  Given the following file:
+$ cat sections
+a:section1-01:orange
+a:section2-02:apple
+a:section3-01:pear
+a:section2-03:mengo
+b:section1-02:cat
+b:section3-01:dog
+b:section2-03:horse
+c:section3-02:blue
+c:section2-01:green
+c:section1-01:red
+c:section1-02:white
+Sort the lines by the second column and then by the third column. The first column is already sorted.
+
+answer: sort -t\: -k2,2 sections | sort -t\: -k3,3 sections 
+
+4. Sort the following file that contains a list of ip addresses:
+$ cat ip-addresses
+24.172.220.218
+41.239.36.19
+63.215.202.234
+66.176.124.22
+78.110.50.139
+163.24.136.10
+79.143.179.98
+83.4.136.214
+84.111.37.26
+187.41.94.232
+187.40.64.252
+24.172.220.218
+187.45.225.192
+189.10.91.21
+190.77.158.128
+193.34.144.193
+answer:sort -V ip_addresses
